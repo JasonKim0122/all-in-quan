@@ -1,0 +1,83 @@
+.container {
+    height: 100px;
+    padding: 0px 52px;
+    background-color: rgba(236, 210, 210, 0.953);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(2) {
+    flex: 3;
+}
+
+.item:nth-child(3) {
+    justify-content: flex-end;
+}
+/*.callButton {
+    background-color: white;
+    border-radius: 50%;
+    padding: 6.5px;
+    width: 36px;
+    height: 40px;
+} */
+
+.texts {
+    margin-left: 15px;
+    color: white;
+}
+
+.text:nth-child(1) {
+    font-size: 15px;
+    font-weight: 450;
+}
+
+.text:nth-child(2) {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo {
+    border-radius: 50%;
+}
+
+.list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+}
+
+.listItem {
+    margin: 22px;
+    font-weight: 550;
+}
+
+.cart {
+    position: relative;
+}
+
+.counter {
+    position: absolute;
+    top: -14px;
+    right: -8px;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: rgba(236, 210, 210, 0.953);
+}

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Featured from '@/components/Featured'
+import FoodList from '@/components/FoodList'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
 
       <Featured />
+      <FoodList />
     </>
   )
 }

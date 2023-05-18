@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    padding: 50px;
+}
+
+.left {
+    flex: 2;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.row:last-child {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preparing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: preparing 1s ease infinite alternate;
+}
+
+@keyframes preparing {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pickup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.pickup .checkedIcon, .preparing .checkedIcon {
+    display: none;
+}
+
+.right {
+    flex: 1;
+}
+
+.wrapper {
+    width: 100%;
+    height: 250px;
+    background-color: #444;
+    padding: 40px;
+    padding-top: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.totalTextTitle {
+    margin-right: 10px;
+}
+
+.button {
+    background-color: white;
+    height: 25px;
+    color: blue;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: not-allowed;
+}

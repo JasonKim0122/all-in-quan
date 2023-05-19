@@ -9,8 +9,8 @@ const Product = () => {
         img: '/img/food-1.JPG',
         name: 'Egg rolls',
         price: [5, 10, 15],
-        description: 'Fried vietamesse egg rolls'
-    };
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi repellendus officiis aliquid vitae id rerum fuga, nulla sint consectetur, ipsa non velit saepe delectus veritatis dolorum voluptatem, corrupti voluptatum.'
+    }
 
     return <div className={styles.container}>
         <div className={styles.left}>
@@ -25,15 +25,15 @@ const Product = () => {
             <h3 className={styles.choose}>Please Choose the size</h3>
             <div className={styles.sizes}>
                 <div className={styles.size} onClick={() => setSize(0)}>
-                    <Image src='/img/size.png' fill alt='' />
+                    <Image src='/img/size.PNG' fill alt='' />
                     <span className={styles.number}>Small</span>
                 </div>
                 <div className={styles.size} onClick={() => setSize(1)}>
-                    <Image src='/img/size.png' fill alt='' />
+                    <Image src='/img/size.PNG' fill alt='' />
                     <span className={styles.number}>Medium</span>
                 </div>
                 <div className={styles.size} onClick={() => setSize(2)}>
-                    <Image src='/img/size.png' fill alt='' />
+                    <Image src='/img/size.PNG' fill alt='' />
                     <span className={styles.number}>Large</span>
                 </div>
             </div>

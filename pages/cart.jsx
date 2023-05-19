@@ -36,6 +36,28 @@ const Cart = () => {
                             <span className={styles.total}>$10</span>
                         </td>
                     </tr>
+                    <tr className={styles.tr}>
+                        <td>
+                            <div className={styles.imgContainer}>
+                                <Image src='/img/food-1.JPG' 
+                                fill
+                                style={'cover'}
+                                alt='' />
+                            </div>
+                        </td>
+                        <td>
+                            <span className={styles.name}>Eggrolls</span>
+                        </td>
+                        <td>
+                            <span className={styles.price}>$5</span>
+                        </td>
+                        <td>
+                            <span className={styles.quantity}>2</span>
+                        </td>
+                        <td>
+                            <span className={styles.total}>$10</span>
+                        </td>
+                    </tr>
                     </thead>
                 </table>
             </div>

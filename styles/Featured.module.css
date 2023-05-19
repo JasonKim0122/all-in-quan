@@ -1,5 +1,5 @@
 .container {
-    height: calc(100vh - 100px);
+    height: calc(67vh - 250px);
     background-color: rgb(232, 225, 225);
     overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@
 }
 
 .wrapper {
-    width: 300vh;
+    width: 120vw;
     height: 100%;
     display: flex;
     transition: all 1.5s ease-in-out;
@@ -31,6 +31,6 @@
 
 @media screen and (max-width: 480px) {
     .container {
-        height:70vh;
+        display: none;
     }
 }

@@ -11,7 +11,11 @@ const Featured = () => {
         '/img/food-3.JPG',
         '/img/food-4.JPG',
         '/img/food-5.JPG',
-        '/img/food-6.JPG'
+        '/img/food-6.JPG',
+        '/img/food-1.JPG',
+        '/img/food-2.JPG',
+        '/img/food-3.JPG',
+        '/img/food-4.JPG'
     ];
 
     const handleArrow = (direction) => {
@@ -28,7 +32,7 @@ const Featured = () => {
             <div className={styles.arrowContainer} style={{left:0}} onClick={()=> handleArrow('l')}>
                 <Image src='/img/arrowL.png' alt="arrow for shifting left" fill />
             </div>
-            <div className={styles.wrapper} style={{transform: `translateX(${-55*index}vw)`}}>
+            <div className={styles.wrapper} style={{transform: `translateX(${-20*index}vw)`}}>
                 {images.map((img, i) => (
                     <div className={styles.imgContainer} key={i}>
                     <Image src={img} alt='featured food' fill objectFit='contain'/>

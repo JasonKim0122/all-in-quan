@@ -1,11 +1,12 @@
 import Head from 'next/head'
+import axios from 'axios'
 import Image from "next/legacy/image"
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Featured from '@/components/Featured'
 import FoodList from '@/components/FoodList'
 
-export default function Home() {
+export default function Home({foodList}) {
   return (
     <>
       <Head>
@@ -16,7 +17,16 @@ export default function Home() {
       </Head>
 
       <Featured />
-      <FoodList />
+      <FoodList foodList = {foodList}/>
     </>
   )
 }
+
+export const getServerSideProps = async () => {
+ const res = await axios.get("http://localhost:3000/api/products");
+ return {
+  props: {
+    foodList: res.data,
+  }
+ }
+};

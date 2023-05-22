@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
     return (
         <div className={styles.container}>
             <div className={styles.item}>
-                <Image src='/img/menu.JPG' style={'cover'} alt='' fill/>
+                <Image src='/img/menu.JPG' style={'cover'} alt='' layout='fill'/>
             </div>
             <div className={styles.item}>
                 <div className={styles.card}>

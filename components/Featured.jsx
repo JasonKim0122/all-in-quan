@@ -30,7 +30,7 @@ const Featured = () => {
     return (
         <div className={styles.container}>
             <div className={styles.arrowContainer} style={{left:0}} onClick={()=> handleArrow('l')}>
-                <Image src='/img/arrowL.png' alt="arrow for shifting left" layout='fill' />
+                <Image src='/img/arrowL.png' alt="arrow for shifting left" layout='fill' objectFit="contain"/>
             </div>
             <div className={styles.wrapper} style={{transform: `translateX(${-20*index}vw)`}}>
                 {images.map((img, i) => (

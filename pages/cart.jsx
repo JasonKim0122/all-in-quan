@@ -18,7 +18,7 @@ const Cart = () => {
                         <td>
                             <div className={styles.imgContainer}>
                                 <Image src='/img/food-1.JPG' 
-                                fill
+                                layout= 'fill'
                                 style={'cover'}
                                 alt='' />
                             </div>
@@ -40,7 +40,7 @@ const Cart = () => {
                         <td>
                             <div className={styles.imgContainer}>
                                 <Image src='/img/food-1.JPG' 
-                                fill
+                                layout='fill'
                                 style={'cover'}
                                 alt='' />
                             </div>

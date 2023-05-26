@@ -34,3 +34,15 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        height: 200px;
+    }
+}

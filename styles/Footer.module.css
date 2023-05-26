@@ -55,3 +55,26 @@
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .item:first-child {
+        display: none;
+    }
+
+    .container {
+        height: 20%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .item:first-child {
+        display: none;
+    }
+
+    .container {
+        height: 20%;
+        flex-direction: column;
+    }
+}

@@ -58,6 +58,22 @@
     margin-top: 20px;
 }
 
+.paymentMethods {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payButton {
+    padding: 10px 5px ;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 9px;
+    background-color: rgb(232, 225, 225);
+    color: rgb(240, 104, 104);
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 480px) {
     .container {

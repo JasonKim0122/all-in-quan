@@ -9,7 +9,7 @@ import {
 } from '@paypal/react-paypal-js';
 
 const Cart = () => {
-    // The values are the props in the UI
+    const [open, setOpen] = useState(false);
     const amount = '2';
     const currency = 'USD';
     const style = {'layout': 'vertical'};
@@ -121,16 +121,23 @@ const Cart = () => {
                     <div className={styles.totalText}>
                         <b className={styles.totalTextTitle}>Total:</b> ${cart.total}
                     </div>
-                    <button className={styles.button}>Checkout Now</button>
-                    <PayPalScriptProvider
-                        options={{
-                            "client-id": "test",
-                            components: "buttons",
-                            currency: "USD",
-                        }}
+                    {open ? (
+                        <div className={styles.paymentMethods}>
+                            <button className={styles.payButton}>Cash on Delivery</button>
+                            <PayPalScriptProvider
+                            options={{
+                                "client-id": "test",
+                                components: "buttons",
+                                currency: "USD",
+                                "disable-funding": "credit,card",
+                            }}
                     >
-                        <ButtonWrapper currency={currency} showSpinner={false} />
-                    </PayPalScriptProvider>
+                            <ButtonWrapper currency={currency} showSpinner={false} />
+                            </PayPalScriptProvider>
+                        </div>
+                    ) : (
+                        <button onClick={() => setOpen(true)} className={styles.button}>Checkout Now</button>
+                    )}
                 </div>
             </div>
         </div>

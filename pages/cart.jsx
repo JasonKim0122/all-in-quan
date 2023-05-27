@@ -7,14 +7,30 @@ import {
     PayPalButtons,
     usePayPalScriptReducer,
 } from '@paypal/react-paypal-js';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import { reset } from '../redux/cartSlice'; 
 
 const Cart = () => {
+    const cart = useSelector((state) => state.cart);
     const [open, setOpen] = useState(false);
-    const amount = '2';
+    const amount = cart.total;
     const currency = 'USD';
     const style = {'layout': 'vertical'};
     const dispatch = useDispatch();
-    const cart = useSelector((state) => state.cart);
+    const router = useRouter();
+
+    const createOrder = async (data) => {
+        try {
+            const res = axios.post("http://localhost:3000/api/orders", data);
+            if (res.status === 201) {
+                dispatch(reset());
+                router.push(`/orders/${res.data._id}`);
+            }
+        } catch(err) {
+            console.log(err);
+        }
+    }
 
     const ButtonWrapper = ({ currency, showSpinner }) => {
         const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
@@ -126,10 +142,11 @@ const Cart = () => {
                             <button className={styles.payButton}>Cash on Delivery</button>
                             <PayPalScriptProvider
                             options={{
-                                "client-id": "test",
+                                "client-id": 
+                                "AfhF-dtxaffWqriU96Vb6TV_C4KEWWjBTxDXG3uBMM3cnCCqW0YhGCkbcqmlyi1CWGinnEI3je9oQBA4",
                                 components: "buttons",
                                 currency: "USD",
-                                "disable-funding": "credit,card",
+                                "disable-funding": "credit,card,p24",
                             }}
                     >
                             <ButtonWrapper currency={currency} showSpinner={false} />

@@ -62,6 +62,7 @@
 .listItem {
     margin: 25px;
     font-weight: 550;
+    cursor: pointer;
 }
 
 .cart {

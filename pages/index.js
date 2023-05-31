@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import axios from 'axios'
-import Image from "next/legacy/image"
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Featured from '@/components/Featured'
-import FoodList from '@/components/FoodList'
+import axios from 'axios';
+import Head from 'next/head';
+import Image from "next/legacy/image";
+import styles from '@/styles/Home.module.css';
+import Featured from '@/components/Featured';
+import FoodList from '@/components/FoodList';
 
 export default function Home({foodList}) {
   return (

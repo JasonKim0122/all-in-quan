@@ -16,8 +16,28 @@ const Add = ({setClose}) => {
     }
 
     const handleCreate = async () => {
+        const data = new FormData();
+        data.append('file', file);
+        data.append('upload_preset', 'uploads')
+        try {
+            const uploadRes = await axios.post('https://api.cloudinary.com/v1_1/dfgeqkkcu/image/upload',
+            data);
 
-    }
+            const { url } = uploadRes.data;
+            const newProduct = {
+                title,
+                description, 
+                prices,
+                img: url,
+            };
+
+            await axios.post('http://localhost:3000/api/products', newProduct);
+            setClose(true);
+
+        } catch(err) {
+            console.log(err);
+        }
+    };
 
     return (
         <div className={styles.container}>
@@ -26,7 +46,7 @@ const Add = ({setClose}) => {
                 <h1>Add New Food</h1>
                 <div className={styles.item}>
                     <label className={styles.label}>Choose an Image</label>
-                    <input type='file' onChange={(e) => setFile(e.target.files(0))}/>
+                    <input type='file' onChange={(e) => setFile(e.target.files[0])} />
                 </div>
                 <div className={styles.item}>
                     <label className={styles.label}>Title</label>

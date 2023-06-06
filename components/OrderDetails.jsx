@@ -14,17 +14,17 @@ const handleClick = () => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <h1 className={styles.title}>You will pay $100 after delivery</h1>
+                <h1 className={styles.title}> </h1>
                 <div className={styles.item}>
                     <label className={styles.label}> Name </label>
-                    <input placeholder="john"
+                    <input placeholder="Please enter your name"
                     type="text"
                     className={styles.input}
                     onChange={(e) => setCustomer(e.target.value)}/>
                 </div>
                 <div className={styles.item}>
-                    <label className={styles.label}> Phone Number </label>
-                    <input placeholder="999-999-9999"
+                    <label className={styles.label}> Your total is ${total} </label>
+                    <input placeholder="000-000-0000"
                     type="text"
                     className={styles.input}
                     onChange={(e) => setphoneNumber(e.target.value)}
@@ -34,7 +34,7 @@ const handleClick = () => {
                     <label className={styles.label}> Address </label>
                     <textarea
                         rows={5}
-                        placeholder="123 Main St"
+                        placeholder="Please enter a valid address!"
                         type='text'
                         className={styles.textarea}
                         onChange={(e) => setAddress(e.target.value)}

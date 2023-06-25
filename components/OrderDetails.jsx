@@ -24,7 +24,7 @@ const handleClick = () => {
                 </div>
                 <div className={styles.item}>
                     <label className={styles.label}> Your total is ${total} </label>
-                    <input placeholder="000-000-0000"
+                    <input placeholder="Please enter a valid phone number"
                     type="text"
                     className={styles.input}
                     onChange={(e) => setphoneNumber(e.target.value)}

@@ -1,3 +1,4 @@
+
 import dbConnect from "@/util/mongo";
 import Order from "@/models/Order";
 
@@ -24,7 +25,16 @@ const handler = async (req, res) => {
             res.status(500).json(err);
         }
     }
-    if (method=== "DELETE"){}
+    if (method === "DELETE"){
+    
+        try {
+            await Order.findByIdAndDelete(id);
+            res.status(201).json("The order has been successfully deleted!");
+
+        } catch(err) {
+            res.status(500).json(err);
+        }
+    }
 }
 
 export default handler;

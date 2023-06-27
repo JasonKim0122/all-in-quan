@@ -17,6 +17,15 @@ const Index = ({orders, products}) => {
         }
     }
 
+    const handleDeleteOrder = async (id) => {
+        try {
+            const res = await axios.delete('http://localhost:3000/api/orders/' + id);
+            setOrderList(orderList.filter(order => order._id !==id));
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     const handleStatus = async (id) => {
 
         const item = orderList.filter(order => order._id === id)[0]
@@ -95,6 +104,7 @@ const Index = ({orders, products}) => {
                             <td>{status[order.status]}</td>
                             <td>
                                 <button onClick={() => handleStatus(order._id)}>Next Stage</button>
+                                <button onClick={() => handleDeleteOrder(order._id)}>Delete</button>
                             </td>
                         </tr>
                     </tbody>

@@ -26,19 +26,21 @@ const Navbar = () => {
                 </Link>
                 {/* <li className={styles.listItem}>Products</li> */}
                 <Image className={styles.logo} src='/img/logo.PNG' alt='resturant logo' width='200' height='70' />
+                <Link href='/menu' passHref>
                 <li className={styles.listItem}>Menu</li>
+                </Link>
                 {/* <li className={styles.listItem}>Events</li>
                 <li className={styles.listItem}>Contacts</li> */}
             </ul>
         </div>
-        <Link href="/cart" passHref>
+        {/* <Link href="/cart" passHref>
         <div className={styles.item}>
             <div className={styles.cart}>
                 <Image src='/img/cart.png' alt='items in your cart' width='20' height='20' />
                 <div className={styles.counter}>{quantity}</div>
             </div>
         </div>   
-        </Link>
+        </Link> */}
         </div>
     )
 }
